@@ -31,20 +31,33 @@ var appendSnippet = function(formData) {
 
 $(document).ready(function() {
 
+  $('.form').hide()
+
   appendSnippetsToPage(snippetCollection)
+
+  $('#addSnippet').click(function(e) {
+    e.preventDefault()
+    $('.form').slideToggle()
+  })
 
   $('form').submit(function(e){
     e.preventDefault()
 
+
     var formData = $('form textarea').val()
 
 
-    appendSnippet(formData)
 
-    snippetCollection.push(formData)
+    if (!formData.match(/^\s+$/)) {
+      $('.form').slideToggle()
 
-    saveSnippetCollection(snippetCollection)
+      appendSnippet(formData)
+
+      snippetCollection.push(formData)
+
+      saveSnippetCollection(snippetCollection)
     // $.ajax
+    }
   })
 
 
