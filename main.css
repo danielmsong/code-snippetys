@@ -1,0 +1,18 @@
+body {
+  margin: 10% 20%;
+}
+
+h1 {
+  color: blue;
+}
+
+.form {
+  height: 500px;
+  width: 500px;
+  background-color: dodgerblue;
+}
+
+form {
+  padding: 10% 0 0 10%;
+
+}
