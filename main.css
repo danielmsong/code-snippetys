@@ -1,5 +1,9 @@
 h1 {
-  color: blue;
+  background: url(vsco-logo.svg) no-repeat top left;
+  background-size: 40px;
+  background-position: 0, 4px;
+  padding-left: 50px;
+  font-family: 'Actor', sans-serif;
 }
 
 #addSnippet {
@@ -21,21 +25,22 @@ h1 {
   color: #444;
 }
 
-.form {
-  height: 500px;
-  width: 500px;
-  background-color: dodgerblue;
-}
-
-form {
-  padding: 10% 0 0 10%;
-}
-
 .indSnippet:nth-child(odd) {
-  background-color: rgba(255, 215, 184, 0.5);
+  background-color: rgba(167, 166, 72, 0.5);
 }
 
 .indSnippet {
   margin: 20px 0;
   padding: 10px;
+}
+
+#searchBox {
+  top: 75px;
+  margin-bottom: 25px;
+}
+
+textarea {
+  width: 99%;
+  height: 300px;
+  padding: 0.5%;
 }
