@@ -43,10 +43,7 @@ $(document).ready(function() {
   $('form').submit(function(e){
     e.preventDefault()
 
-
     var formData = $('form textarea').val()
-
-
 
     if (!formData.match(/^\s+$/)) {
       $('.form').slideToggle()
@@ -60,6 +57,24 @@ $(document).ready(function() {
     }
   })
 
+   $('#searchBox').keyup(function() {
+    var searchText = $(this).val()
+
+    for (var i=0; i < snippetCollection.length; i++) {
+      if(!snippetCollection[i].match(searchText)) {
+        $('.indSnippet:nth-child(' + (i + 1) + ')').hide()
+      }
+      else {
+        $('.indSnippet:nth-child(' + (i + 1) + ')').show()
+        console.log(i)
+      }
+    }
+    console.log(searchText)
+
+    // for each match in matchingSearches
+
+
+   })
 
 
 })
